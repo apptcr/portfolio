@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>นายอภิภูมิ เทศชารี - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Kanit for Thai text -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to ensure Kanit font is applied and for specific overrides */
+        body {
+            font-family: 'Kanit', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Hide content by default, show only active one */
+        .content:not(.active) {
+            display: none;
+        }
+        /* Custom style for active tab */
+        .tab-link.active-tab {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); /* Adjusted gradient for active tab */
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        /* Gradient background for header */
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        /* Section padding for main content areas */
+        .section-padding {
+            padding: 4rem 0;
+        }
+        /* Card hover effect */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <div class="max-w-4xl mx-auto">
+                <!-- Profile Image -->
+                <img src="profile.jpg" alt="นายอภิภูมิ เทศชารี" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg object-cover">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">นายอภิภูมิ เทศชารี</h1>
+                <p class="text-xl md:text-2xl font-light mb-8">Creative Designer • Video Editor • Graphic Designer</p>
+                
+                <!-- Navigation Tabs -->
+                <nav class="flex flex-wrap justify-center space-x-2 md:space-x-4 mt-8">
+                    <button class="tab-link active-tab px-6 py-3 rounded-lg font-medium transition-all duration-300" data-tab="about">
+                        เกี่ยวกับฉัน
+                    </button>
+                    <button class="tab-link px-6 py-3 rounded-lg font-medium bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300" data-tab="experience">
+                        ประสบการณ์
+                    </button>
+                    <button class="tab-link px-6 py-3 rounded-lg font-medium bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300" data-tab="portfolio">
+                        ผลงาน
+                    </button>
+                    <button class="tab-link px-6 py-3 rounded-lg font-medium bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300" data-tab="contact">
+                        ติดต่อ
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section-padding">
+        <div class="container mx-auto px-6 max-w-6xl">
+            
+            <!-- About Section -->
+            <div id="about" class="content active">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <!-- Left Column - About Me -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">เกี่ยวกับ</h2>
+                        <div class="bg-white rounded-xl p-8 shadow-md card-hover h-full flex flex-col justify-between">
+                            <div>
+                                <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                                    ผม นายอภิภูมิ เทศชารี เป็นนักออกแบบกราฟิกที่มีประสบการณ์และความเชี่ยวชาญในการสร้างสรรค์สื่อดิจิทัล 
+                                    ตั้งแต่การออกแบบกราฟิกที่สวยงาม การตัดต่อวิดีโอที่น่าสนใจ ไปจนถึงการประสานงานโครงการต่างๆ 
+                                    ผมมีความมุ่งมั่นที่จะนำความคิดสร้างสรรค์และทักษะทางเทคนิคมาใช้ในการพัฒนาผลงานที่มีคุณภาพและตอบโจทย์ความต้องการ
+                                    ของลูกค้าและองค์กรได้อย่างแท้จริง
+                                </p>
+                                <p class="text-gray-700 text-lg leading-relaxed">
+                                    ตลอดเส้นทางการทำงาน ผมได้สั่งสมประสบการณ์จากหลากหลายองค์กร ทั้งภาครัฐและเอกชน 
+                                    ซึ่งทำให้ผมมีความเข้าใจในบริบทการทำงานที่แตกต่างกัน และสามารถปรับตัวเข้ากับความท้าทายใหม่ๆ ได้ดี
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Personal Info & Education -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">ข้อมูลส่วนตัว</h3>
+                        <div class="bg-white rounded-xl p-8 shadow-md card-hover mb-8">
+                            <div class="space-y-4 text-gray-700 text-lg">
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-blue-500 rounded-full mr-4 flex-shrink-0"></span>
+                                    <strong>ชื่อ:</strong> นายอภิภูมิ เทศชารี
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-green-500 rounded-full mr-4 flex-shrink-0"></span>
+                                    <strong>วัน/เดือน/ปีเกิด:</strong> 1 พฤษภาคม 2541
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-purple-500 rounded-full mr-4 flex-shrink-0"></span>
+                                    <strong>สัญชาติ:</strong> ไทย
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-orange-500 rounded-full mr-4 flex-shrink-0"></span>
+                                    <strong>เชื้อชาติ:</strong> ไทย
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-3 h-3 bg-red-500 rounded-full mr-4 flex-shrink-0"></span>
+                                    <strong>ศาสนา:</strong> คริสต์ (โรมันคาทอลิก)
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">ประวัติการศึกษา</h3>
+                        <div class="bg-white rounded-xl p-8 shadow-md card-hover">
+                            <div class="space-y-4 text-gray-700 text-lg">
+                                <div>
+                                    <p class="font-bold">อุดมศึกษา:</p>
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li>สถาบันการจัดการปัญญาภิวัฒน์</li>
+                                        <li>คณะนิเทศศาสตร์ สาขาการสื่อสารองค์กรและแบรนด์</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold">ประถม - มัธยม:</p>
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li>โรงเรียนพระมารดานิจจานุเคราะห์</li>
+                                        <li>มัธยมปลาย: ศิลป์-ภาษา เอกภาษาจีน</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold">อนุบาล:</p>
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li>โรงเรียนพระมารดานิจจานุเคราะห์</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <h3 class="text-3xl font-bold text-gray-800 mt-16 mb-8 text-center">ทักษะความเชี่ยวชาญ</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg p-6 shadow-md card-hover text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+                            🎨
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-xl mb-1">Graphic Design</h4>
+                        <p class="text-sm text-gray-600">Adobe Photoshop, Illustrator, InDesign</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md card-hover text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+                            🎬
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-xl mb-1">Video Editing</h4>
+                        <p class="text-sm text-gray-600">Adobe Premiere Pro, After Effects</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md card-hover text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+                            🤝
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-xl mb-1">Coordination & Management</h4>
+                        <p class="text-sm text-gray-600">Project Coordination, Communication</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md card-hover text-center">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+                            💻
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-xl mb-1">Digital Media</h4>
+                        <p class="text-sm text-gray-600">Content Creation, Social Media</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div id="experience" class="content">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">ประสบการณ์การทำงาน</h2>
+                    
+                    <!-- Work Experience List -->
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-xl p-6 shadow-md card-hover border-l-4 border-orange-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="text-xl font-bold text-gray-800">เจ้าหน้าที่ธุรการฝ่ายผลิต</h4>
+                                <span class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">ต.ค. 2565 - ปัจจุบัน</span>
+                            </div>
+                            <p class="text-orange-600 font-medium mb-2">บริษัท อุตสาหกรรมอาหารไทย (1964) จำกัด</p>
+                            <p class="text-gray-700">ดูแล รับผิดชอบงานธุรการ และจัดการบันทึกข้อมูลรายงานการผลิต รวมถึงคำนวนผลต่างของยอดวัตถุดิบและผลผลิต ให้แม่นยำที่สุด</p>
+                        </div>					
+					
+                        <div class="bg-white rounded-xl p-6 shadow-md card-hover border-l-4 border-blue-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="text-xl font-bold text-gray-800">เจ้าหน้าที่บริหารงานทั่วไป</h4>
+                                <span class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">เม.ย. - ต.ค. 2565</span>
+                            </div>
+                            <p class="text-blue-600 font-medium mb-2">KU-TAC</p>
+                            <p class="text-gray-700">รับผิดชอบการติดต่อประสานงาน และการผลิตสื่อประชาสัมพันธ์ รวมถึงงานกราฟิกต่างๆ เพื่อสนับสนุนการดำเนินงานของศูนย์</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-md card-hover border-l-4 border-green-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="text-xl font-bold text-gray-800">Graphic Designer & Video Editor</h4>
+                                <span class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">พ.ค. - ธ.ค. 2564</span>
+                            </div>
+                            <p class="text-green-600 font-medium mb-2">โครงการ "มหาวิทยาลัยสู่ตำบล" U2T</p>
+                            <p class="text-gray-700">สร้างสรรค์งานกราฟิกและตัดต่อวิดีโอเพื่อใช้ในการสื่อสารและประชาสัมพันธ์โครงการ U2T สู่ชุมชน</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-md card-hover border-l-4 border-purple-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="text-xl font-bold text-gray-800">Graphic Designer</h4>
+                                <span class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">ต.ค. 2563 - ก.พ. 2564</span>
+                            </div>
+                            <p class="text-purple-600 font-medium mb-2">B Autohaus</p>
+                            <p class="text-gray-700">รับผิดชอบงานออกแบบกราฟิกและสื่อประชาสัมพันธ์ต่างๆ ให้กับธุรกิจยานยนต์</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-md card-hover border-l-4 border-orange-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="text-xl font-bold text-gray-800">Graphic Design Intern</h4>
+                                <span class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">ส.ค. 2562 - ม.ค. 2563</span>
+                            </div>
+                            <p class="text-orange-600 font-medium mb-2">DGA สำนักงานพัฒนารัฐบาลดิจิทัล</p>
+                            <p class="text-gray-700">ฝึกงานด้านกราฟิกดีไซน์และสนับสนุนงานสื่อสารของหน่วยงานภาครัฐ</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-md card-hover border-l-4 border-red-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="text-xl font-bold text-gray-800">Graphic Design Intern</h4>
+                                <span class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">พ.ค. - ส.ค. 2561</span>
+                            </div>
+                            <p class="text-red-600 font-medium mb-2">True Shopping</p>
+                            <p class="text-gray-700">ฝึกงานฝ่าย Graphic</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-md card-hover border-l-4 border-yellow-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="text-xl font-bold text-gray-800">Editorial Intern</h4>
+                                <span class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">พ.ย. 2560 - ก.พ. 2561</span>
+                            </div>
+                            <p class="text-yellow-600 font-medium mb-2">HUG Magazine</p>
+                            <p class="text-gray-700">ฝึกงานในกองบรรณาธิการ</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-md card-hover border-l-4 border-teal-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="text-xl font-bold text-gray-800">Cashier Intern</h4>
+                                <span class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">พ.ค. - ส.ค. 2560</span>
+                            </div>
+                            <p class="text-teal-600 font-medium mb-2">ร้านเซเว่นอีเลฟเว่น</p>
+                            <p class="text-gray-700">ฝึกงานในตำแหน่งแคชเชียร์</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div id="portfolio" class="content">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">ผลงานที่น่าภาคภูมิใจ</h2>
+                    <p class="text-gray-600 text-lg">ตัวอย่างผลงานที่สะท้อนความสามารถและประสบการณ์</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio Item 1: Corporate Branding (B Autohaus) -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <img src="file01.png" alt="" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">ผลงานบางส่วนในช่วงอยู่กับ B AUTOHAUS</h3>
+                            <p class="text-gray-600 mb-4">ออกแบบ Art Work ที่ใช้สำหรับโปรโมท และขายสินค้า เพื่อนำไปลงเพจ B Autohaus ร่วมถึงการประชาสัมพันธ์ด้วย</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Branding</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Graphic Design</span>
+                                <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Marketing Collateral</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 2: Video Production (Video) -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <img src="file02.png" alt="" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">ผลงานการตัดต่อบางส่วน</h3>
+                            <p class="text-gray-600 mb-4">ผลงานการตัดต่อวิดีโอเพื่อการโฆษณา และการสื่อสารประชาสัมพันธ์</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Video Editing</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Motion Graphics</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Digital Content</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 3: Government Projects (DGA) -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <img src="file03.png" alt="" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">ผลงานบางส่วนในช่วงอยู่กับ สำนักงานพัฒนารัฐบาลดิจิทัล (DGA)</h3>
+                            <p class="text-gray-600 mb-4">งานออกแบบกราฟิกและสื่อประชาสัมพันธ์สำหรับสำนักงานพัฒนารัฐบาลดิจิทัล (DGA)</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Public Sector</span>
+                                <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Infographics</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Campaign Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 4: Educational Content (KU-TAC) -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <img src="file04.png" alt="" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">ผลงานบางส่วนในช่วงอยู่กับ KU-TAC</h3>
+                            <p class="text-gray-600 mb-4">ออกแบบสื่อโปสเตอร์ และงานกราฟิกเพื่ออาจารย์ และนักศึกษาที่เข้าร่วมโครงการกับทาง KU-TAC</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Education</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Poster Design</span>
+                                <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">Information Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 5: Magazine Layout (HUG Magazine) -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <img src="file05.png" alt="" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">ผลงานบางส่วนในช่วงอยู่กับ HUG Magazine</h3>
+                            <p class="text-gray-600 mb-4">ประสบการณ์การฝึกงานในกองบรรณาธิการ HUG Magazine ในการเขียนเนื้อหาลง Magazine การจัดวาง Layout ออกแบบเนื้อหาภายในหน้า</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Editorial</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Layout Design</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Content Curation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 6: Creative Projects (U2T) -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                        <img src="file06.png" alt="" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">ผลงานบางส่วนในช่วงอยู่กับ U2T</h3>
+                            <p class="text-gray-600 mb-4">ออกแบบ และสร้างสรรค์งานกราฟิก รวมถึงตัดต่อวิดีโอ เพื่อใช้ในการสื่อสารและประชาสัมพันธ์โครงการ U2T สู่ชุมชน</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Digital Art</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Concept Development</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Problem Solving</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contact" class="content">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8">ติดต่อ</h2>
+                    <div class="bg-white rounded-xl p-8 shadow-md card-hover">
+                        <p class="text-xl text-gray-700 mb-8">
+                            หากมีข้อสงสัย ต้องการสอบถามข้อมูลเพิ่มเติม หรือสนใจร่วมงาน สามารถติดต่อผมได้ตามช่องทางด้านล่างนี้
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4 text-2xl">
+                                    📧
+                                </div>
+                                <a href="mailto:apptcr.namjit@gmail.com" class="text-blue-600 hover:underline text-lg md:text-xl">
+                                    apptcr.namjit@gmail.com
+                                </a>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 text-2xl">
+                                    📱
+                                </div>
+                                <span class="text-gray-700 text-lg md:text-xl">084-891-4011</span>
+                            </div>
+                            <!--<div class="flex items-center justify-center">
+                                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4 text-2xl">
+                                    🔗
+                                </div>
+                                <a href="#" class="text-purple-600 hover:underline text-lg md:text-xl">
+                                    (ลิงก์ LinkedIn/เว็บไซต์ส่วนตัวอื่นๆ)
+                                </a>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Namjit. &copy1998 - 2025 Apipume Thescharee</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const contents = document.querySelectorAll('.content');
+
+            // Function to set active tab and content
+            function setActiveTab(targetTabId) {
+                tabLinks.forEach(l => {
+                    l.classList.remove('active-tab');
+                    // Reset to default Tailwind classes for inactive tabs
+                    l.className = 'tab-link px-6 py-3 rounded-lg font-medium bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300';
+                });
+                contents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                const clickedTab = document.querySelector(`.tab-link[data-tab="${targetTabId}"]`);
+                if (clickedTab) {
+                    clickedTab.classList.add('active-tab');
+                }
+                
+                // Show corresponding content
+                const targetContent = document.getElementById(targetTabId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            }
+
+            // Add click event listeners to tabs
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetTabId = this.dataset.tab;
+                    setActiveTab(targetTabId);
+                });
+            });
+
+            // Set initial active tab based on URL hash or default to 'about'
+            const initialHash = window.location.hash.substring(1); // Remove '#'
+            if (initialHash && document.getElementById(initialHash)) {
+                setActiveTab(initialHash);
+            } else {
+                setActiveTab('about'); // Default to 'about' tab
+            }
+        });
+    </script>
+</body>
+</html>
